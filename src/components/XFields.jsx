@@ -121,22 +121,23 @@ const XFields = ({ formData, handleChange }) => {
           />
         </Col>
 
-        <Col md={6} className="pt-4">
-          <Form.Check
-            type="checkbox"
-            label="Check Here"
-            name="checkHere"
-            checked={formData.checkHere}
-            onChange={(e) =>
-              handleChange({
-                target: {
-                  name: "checkHere",
-                  value: e.target.checked
-                }
-              })
-            }
-          />
-        </Col>
+         <Col md={6} className="pt-4">
+                  <Form.Check
+                    type="checkbox"
+                    label="Check Here"
+                    name="checkHere"
+                    checked={formData.checkHere}
+                    className="custom-checkbox2"
+                    onChange={(e) =>
+                      handleChange({
+                        target: {
+                          name: "checkHere",
+                          value: e.target.checked
+                        }
+                      })
+                    }
+                  />
+                </Col>
 
       </Row>
 

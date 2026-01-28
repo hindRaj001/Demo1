@@ -2,6 +2,17 @@ html {
   font-size: 12px;   /* default is 16px */
 }
 
+.custom-checkbox input[type="checkbox"]{
+  accent-color: green;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+} 
+
+.custom-checkbox2 input[type="checkbox"]{
+   accent-color: green;
+  border: 1px solid black;
+} 
 
 
 

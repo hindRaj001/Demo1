@@ -143,7 +143,7 @@ const DiamondAddForm = () => {
     />
   </SectionCard>
 
-<SectionCard title="Specifications">
+<SectionCard title="Specifications" >
     <Specifications 
       formData={formData} 
       handleChange={handleChange} 

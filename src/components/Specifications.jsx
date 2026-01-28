@@ -6,10 +6,14 @@ const Specifications = ({ formData, handleChange }) => {
   return (
     <>
 
+      
+
       {/* <h6 className="fw-bold mt-4 mb-3">Specifications</h6> */}
 
       {/* Row 1 */}
       <Row className="mb-3">
+
+       
 
         <Col md={3}>
           <Form.Label>Fluorescence :</Form.Label>
