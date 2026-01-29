@@ -37,11 +37,6 @@ The form is designed for entering diamond lot details with a clean, responsive l
 
 ---
 
-## 📸 Screenshot
-
-![Diamond Lot UI](./src/assets/screenshot.png)
-
----
 
 ## 📌 How to Run Locally
 
