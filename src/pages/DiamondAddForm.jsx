@@ -9,6 +9,7 @@ import XFields from "../components/XFields";
 import Specifications from "../components/Specifications";
 import FooterActions from "../components/FooterActions";
 import SectionCard from "../components/SectionCard";
+import { toast } from "react-toastify";
 
 const DiamondAddForm = () => {
 
@@ -77,6 +78,14 @@ const DiamondAddForm = () => {
   if (!formData.size) newErrors.size = "Size is required";
   if (!formData.shape) newErrors.shape = "Shape is required";
   if (!formData.purity) newErrors.purity = "Purity is required";
+  if (
+  formData.depth &&
+  (isNaN(formData.depth) ||
+    formData.depth < 0 ||
+    formData.depth > 100)
+) {
+  newErrors.depth = "Depth must be between 0 and 100";
+}
 
   setErrors(newErrors);
 
@@ -96,10 +105,12 @@ const DiamondAddForm = () => {
 
 
  const handleSubmit = () => {
-  if (!validateForm()) return;
+  if (!validateForm()) {
+    toast.warning("Please fill all required fields!");
+    return;
+  }
 
-  console.log("Form Data:", formData);
-  alert("Saved successfully!");
+  toast.success("Lot saved successfully!");
 };
 
 

@@ -64,7 +64,7 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
             <option>VS1</option>
           </Form.Select>
           <Form.Control.Feedback type="invalid">
-                  {errors.supplier}
+                  {errors.purity}
          </Form.Control.Feedback>
         </Col>
 
@@ -166,7 +166,11 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
             name="depth"
             value={formData.depth}
             onChange={handleChange}
+            isInvalid={!!errors.depth}
           />
+          <Form.Control.Feedback type="invalid">
+                  {errors.depth}
+         </Form.Control.Feedback>
         </Col>
 
         <Col md={3}>
