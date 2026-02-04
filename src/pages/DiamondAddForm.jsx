@@ -14,59 +14,74 @@ import { toast } from "react-toastify";
 const DiamondAddForm = () => {
 
     const [formData, setFormData] = useState({
-  lotNo: "",
-  group: "",
-  description: "",
-  supplier: "",
 
-  size: "",
-  shape: "",
-  cut: "",
-  color: "",
+    // Basic Details
+    lotNo: "",
+    group: "",
+    description: "",
+    supplier: "",
 
-  purity: "",
-  unit: "Carats",
-  cutHS: "",
-  colorOrigin: "",
+    size: "",
+    shape: "",
+    cut: "",
+    color: "",
 
-  minGirdle: "",
-  maxGirdle: "",
-  refNo: "",
-  weight: "",
+    purity: "",
+    unit: "Carats",
+    cutHS: "",
+    colorOrigin: "",
 
-  remarks: "",
-  depth: "",
-  cutEX: "",
-  showSrNo: "",
+    minGirdle: "",
+    maxGirdle: "",
+    refNo: "",
+    weight: "",
 
-  x1: "",
-  x2: "",
-  x3: "",
-  x4: "",
-  x5: "",
-  x6: "",
-  x7: "",
-  x8: "",
-  x9: "",
-  x10: "",
-  checkHere: false,
+    remarks: "",
+    depth: "",
+    cutEX: "",
+    showSrNo: "",
 
-   fluorescence: "",
-  lab: "",
-  polish: "",
-  symmetry: "",
 
-  certificateNo: "",
-  ha: "",
-  inscription: "",
-  tablePercent: "",
+    // X Fields
+    x1: "",
+    x2: "",
+    x3: "",
+    x4: "",
+    x5: "",
+    x6: "",
+    x7: "",
+    x8: "",
+    x9: "",
+    x10: "",
+    checkHere: false,
 
-  crownAngle: "",
-  pavilionAngle: "",
 
+    // ✅ Updated Specifications Fields (New Layout)
+
+    // Row 1 Dropdowns
+    fluorescence: "",
+    lab: "",
+    polish: "",
+    symmetry: "",
+    comment: "",
+    tableInclusion: "",
+
+    // Row 2 Dropdowns
+    luster: "",
+    countryOrigin: "",
+    shade: "",
+    blackInclusion: "",
+    openInclusion: "",
+    lab2: "",
+
+    // Row 3 Number Inputs
+    lab2No: "",
+    lab2CtsWt: "",
+
+
+    // Extra Option
     createMultiple: false,
-
-});
+  });
 
    const [errors, setErrors] = useState({});
    const validateForm = () => {
