@@ -1,52 +1,58 @@
+import { Button, Form, InputGroup } from "react-bootstrap";
 
-import { Row, Col, Button, Form } from "react-bootstrap";
 
-
-const FooterActions = ({ formData, handleChange, handleSubmit }) => {
+const FooterActions = () => {
   return (
-    <div style={{
-    backgroundColor: "#ffffff",
-    padding: "15px 20px",
-    borderTop: "1px solid black",
-    // borderLeft: "1px solid black",
-    // borderRight: "1px solid black",
-    boxShadow: "0 -2px 6px rgba(0,0,0,0.05)",
-    bottom: 0,
-    zIndex: 100
-  }}>
+    <div
+      style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        backgroundColor: "#ffffff",
+        padding: "10px 0",
+        borderTop: "1px solid #444",
+        boxShadow: "0 -2px 4px rgba(0,0,0,0.2)",
+        zIndex: 1000,
+      }}
+    >
+      <div
+        className="d-flex align-items-center justify-content-center flex-nowrap gap-2"
+        style={{ whiteSpace: "nowrap" }}
+      >
+        {/* Category Buttons */}
+       <Button size="sm" variant="outline-primary">Branded Jewelry</Button>
+<Button size="sm" variant="outline-primary" className="custom-btn">ColorStone</Button>
+<Button size="sm" variant="outline-primary" className="custom-btn">Diamond</Button> 
+<Button size="sm" variant="outline-primary" className="custom-btn">Metal</Button>
+<Button size="sm" variant="outline-primary" className="custom-btn">New Jewelry</Button>
+<Button size="sm" variant="outline-primary" className="custom-btn">Stone</Button>
+<Button size="sm" variant="outline-primary" className="custom-btn">Watch</Button>
+        <Button size="sm" variant="outline-danger" className="custom-btn">Edit</Button>
+        {/* Lot No Input */}
+        <Form.Control
+          size="sm"
+          placeholder="Insert Lot No"
+          style={{ width: "140px" }}
+        />
 
-      <hr className="mt-4 mb-3" />
+        {/* Group Dropdown */}
+        <InputGroup size="sm" style={{ width: "170px" }}>
+          <InputGroup.Text>Group</InputGroup.Text>
+          <Form.Select>
+            <option>Bracelet</option>
+            <option>Ring</option>
+            <option>Necklace</option>
+          </Form.Select>
+        </InputGroup>
 
-      <Row className="align-items-center">
-
-        {/* Left side navigation buttons */}
-        <Col md={6}>
-
-          <Button variant="outline-secondary" className="me-2">
-             ⏮ First
-          </Button>
-
-          <Button variant="outline-secondary" className="me-2">
-            ◀ Prev
-          </Button>
-
-          <Button variant="outline-secondary" className="me-2">
-            Next ▶
-          </Button>
-
-          <Button variant="outline-secondary">
-            Last ⏭
-          </Button>
-
-        </Col>
-
-        
-
-        
-        
-
-      </Row>
-
+        {/* Action Buttons */}
+        <Button size="sm" variant="primary" className="custom-btn">View</Button>
+        <Button size="sm" variant="outline-secondary" className="custom-btn">First</Button>
+<Button size="sm" variant="outline-secondary" className="custom-btn">Prev</Button>
+<Button size="sm" variant="outline-secondary" className="custom-btn">Next</Button>
+<Button size="sm" variant="outline-secondary" className="custom-btn">Last</Button>
+      </div>
     </div>
   );
 };

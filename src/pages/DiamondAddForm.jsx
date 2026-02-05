@@ -11,6 +11,7 @@ import FooterActions from "../components/FooterActions";
 import SectionCard from "../components/SectionCard";
 import { toast } from "react-toastify";
 import SaveButton from "../components/SaveButton";
+import '../App.css'
 
 const DiamondAddForm = () => {
 
@@ -138,7 +139,8 @@ const DiamondAddForm = () => {
       <div className="pg-bg">
       <Header />
 
-      <Container className="page-wrapper" style={{ backgroundColor: "#f5f6fa", minHeight: "100vh" }}>
+      <Container className="page-wrapper" style={{ backgroundColor: "#f5f6fa", minHeight: "100vh", display: "flex",
+    flexDirection: "column", }}>
 
         <div className="p-1 shadow-sm"> 
           {/* Form sections will come here */}
@@ -195,13 +197,15 @@ const DiamondAddForm = () => {
 
   <SaveButton></SaveButton>
 
- <FooterActions 
+ 
+
+</Form>
+
+<FooterActions 
     formData={formData}
     handleChange={handleChange}
     handleSubmit={handleSubmit}
   />
-
-</Form>
       </Container>
 
       
