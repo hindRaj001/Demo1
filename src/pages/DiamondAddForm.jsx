@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { Container, Card , Form} from "react-bootstrap";
+import { Row, Button, Col,Container, Card , Form} from "react-bootstrap";
 import Header from "../components/Header";
 import LotBasicInfo from "../components/LotBasicInfo";
 import CutAndBasicDetails from "../components/CutAndBasicDetails";
@@ -10,6 +10,7 @@ import Specifications from "../components/Specifications";
 import FooterActions from "../components/FooterActions";
 import SectionCard from "../components/SectionCard";
 import { toast } from "react-toastify";
+import SaveButton from "../components/SaveButton";
 
 const DiamondAddForm = () => {
 
@@ -53,6 +54,7 @@ const DiamondAddForm = () => {
     x8: "",
     x9: "",
     x10: "",
+    x11: "",
     checkHere: false,
 
 
@@ -136,18 +138,18 @@ const DiamondAddForm = () => {
       <div className="pg-bg">
       <Header />
 
-      <Container className="page-wrapper mt-4" style={{ backgroundColor: "#f5f6fa", minHeight: "100vh" }}>
+      <Container className="page-wrapper" style={{ backgroundColor: "#f5f6fa", minHeight: "100vh" }}>
 
-        <Card className="p-3 shadow-sm"> 
+        <div className="p-1 shadow-sm"> 
           {/* Form sections will come here */}
           <h6 className="text-center text-muted">
             Last created lot "DM2"
           </h6>
-       </Card>
+       </div>
 
         <Form>
 
-   <SectionCard title="Lot Basic Information">
+   <SectionCard >
     <LotBasicInfo 
       formData={formData} 
       errors={errors}
@@ -162,19 +164,36 @@ const DiamondAddForm = () => {
 
 
 
-  <SectionCard title="X Fields">
+  <SectionCard>
     <XFields 
       formData={formData} 
       handleChange={handleChange} 
     />
   </SectionCard>
 
-<SectionCard title="Specifications" >
+   <Col className="d-flex justify-content-center align-items-center gap-3">
+          
+          {/* Title */}
+          <h6 className="fw-bold mb-0">Specifications</h6>
+
+          {/* Checkbox */}
+          <Form.Check
+            type="checkbox"
+            label="Check Here"
+            name="specCheck"
+            checked={formData.specCheck}
+            onChange={handleChange}
+          />
+        </Col>
+
+<SectionCard>
     <Specifications 
       formData={formData} 
       handleChange={handleChange} 
     />
   </SectionCard>
+
+  <SaveButton></SaveButton>
 
  <FooterActions 
     formData={formData}

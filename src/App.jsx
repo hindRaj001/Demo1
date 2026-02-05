@@ -1,5 +1,6 @@
 import DiamondAddForm from "./pages/DiamondAddForm";
 import { ToastContainer } from "react-toastify";
+import './App.css';
 
 function App() {
  return <div  style={{ backgroundColor: "#f4f6f9", minHeight: "100vh", padding: "20px" }}>

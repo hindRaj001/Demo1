@@ -5,7 +5,7 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
   return (
     <>
       {/* Row 2 */}
-      <Row className="align-items-center mb-2">
+      <Row className="align-items-center mb-1">
         <Col md={3}>
           <div className="d-flex align-items-center gap-2">
             <Form.Label className="mb-0 w-50">Size:</Form.Label>
@@ -56,7 +56,7 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
       </Row>
 
       {/* Row 3 */}
-      <Row className="align-items-center mb-2">
+      <Row className="align-items-center mb-1">
         <Col md={3}>
           <div className="d-flex align-items-center gap-2">
             <Form.Label className="mb-0 w-50">Purity:</Form.Label>
@@ -118,7 +118,7 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
       </Row>
 
       {/* Row 4 */}
-      <Row className="align-items-center mb-2">
+      <Row className="align-items-center mb-1">
         <Col md={3}>
           <div className="d-flex align-items-center gap-2">
             <Form.Label className="mb-0 w-50">Min Girdle:</Form.Label>
@@ -169,7 +169,7 @@ const CutAndBasicDetails = ({ formData, handleChange, errors }) => {
       </Row>
 
       {/* Row 5 */}
-      <Row className="align-items-center mb-2">
+      <Row className="align-items-center mb-1">
         <Col md={3}>
           <div className="d-flex align-items-center gap-2">
             <Form.Label className="mb-0 w-50">Remarks:</Form.Label>

@@ -11,7 +11,6 @@ const FooterActions = ({ formData, handleChange, handleSubmit }) => {
     // borderLeft: "1px solid black",
     // borderRight: "1px solid black",
     boxShadow: "0 -2px 6px rgba(0,0,0,0.05)",
-    position: "sticky",
     bottom: 0,
     zIndex: 100
   }}>
@@ -41,29 +40,10 @@ const FooterActions = ({ formData, handleChange, handleSubmit }) => {
 
         </Col>
 
-        {/* Right side checkbox + save */}
-        <Col md={6} className="text-end">
+        
 
-          <Form.Check
-            
-            inline
-            type="checkbox"
-            label="Create Multiple Lots"
-            name="createMultiple"
-            checked={formData.createMultiple}
-            onChange={handleChange}
-            className="fs-5 fw-semibold custom-checkbox"
-          />
-
-          <Button 
-            variant="success" 
-            className="px-4 fw-bold"
-            onClick={handleSubmit}
-          >
-            💾 Save
-          </Button>
-
-        </Col>
+        
+        
 
       </Row>
 

@@ -3,7 +3,7 @@ import { Row, Col, Form } from "react-bootstrap";
 
 const LotBasicInfo = ({ formData, handleChange, errors }) => {
   return (
-    <Row className="align-items-center mb-2">
+    <Row className="align-items-center mb-1">
 
       {/* ✅ Lot No */}
       <Col md={3}>

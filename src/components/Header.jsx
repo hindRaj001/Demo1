@@ -4,9 +4,9 @@ import { Navbar, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar bg="primary" variant="dark" className="py-2">
+    <Navbar bg="primary" variant="dark" className="py-0">
       <Container>
-        <Navbar.Brand className="mx-auto fw-bold">
+        <Navbar.Brand className="mx-auto fw-bold ">
           Diamond Add Form
         </Navbar.Brand>
       </Container>
