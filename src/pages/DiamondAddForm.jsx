@@ -139,7 +139,7 @@ const DiamondAddForm = () => {
       <div className="pg-bg">
       <Header />
 
-      <Container className="page-wrapper" style={{ backgroundColor: "#f5f6fa", minHeight: "100vh", display: "flex",
+      <Container className="page-wrapper" style={{ paddingBottom: "90px", backgroundColor: "#f5f6fa", minHeight: "100vh", display: "flex",
     flexDirection: "column", }}>
 
         <div className="p-1 shadow-sm"> 

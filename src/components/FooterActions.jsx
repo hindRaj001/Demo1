@@ -3,6 +3,7 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 const FooterActions = () => {
   return (
     <div
+     className="footer-scroll"
       style={{
         position: "fixed",
         bottom: 0,
@@ -15,10 +16,15 @@ const FooterActions = () => {
         zIndex: 1000,
         overflowX: "auto",
         whiteSpace: "nowrap",
+         WebkitOverflowScrolling: "touch",
       }}
     >
       <div
-        className="d-flex align-items-center justify-content-center  gap-2"
+        className="d-flex align-items-center justify-content-center gap-2"
+        style={{
+          minWidth: "max-content",
+          whiteSpace: "nowrap",
+        }}
         
       >
         {/* Category Buttons */}

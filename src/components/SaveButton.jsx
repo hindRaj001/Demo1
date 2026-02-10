@@ -21,6 +21,7 @@ const SaveButton = (formData, handleSubmit, handleChange) => {
             checked={formData.createMultiple}
             onChange={handleChange}
             className="fs-5 fw-semibold custom-checkbox"
+            style={{ whiteSpace: "nowrap" }}
           />
 
        </div>
